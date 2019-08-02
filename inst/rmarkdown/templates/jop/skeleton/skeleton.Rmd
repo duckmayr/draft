@@ -1,0 +1,31 @@
+---
+title: "Your Title"
+author: "Your Name"
+abstract: "Your abstract should go here. It should not exceed 150 words."
+anonymized: true
+output:
+    draft::jop_submission:
+        keep_tex: yes
+---
+
+Your introduction should go at the very beginning.
+It should not have a section heading.
+Note that your initial submission should be anonymized.
+This is, in part (I cannot stop you from referencing your identity in the text),
+enforced by the YAML option "anonymized", which is true by default.
+If you set it to false, your name (as provided in the "author" option)
+will be displayed via `\maketitle`.
+
+Short article submissions must be 10 pages or less, including tables, figures,
+footnotes, and references, but excluding the title page, abstract page,
+and online appendix. Research articles must be 35 pages or less (same counting).
+
+# Section headings should be short
+
+Section headings should not take up more than a single line of text.
+There should be no section heading for the introduction.
+Do not use headings immediately after one another without text in between.
+You generally should not use headings at the sub-sub-heading level or below.
+Do not refer to sections by number, as sections are not numbered.
+
+

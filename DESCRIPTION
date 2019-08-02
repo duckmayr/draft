@@ -1,0 +1,14 @@
+Package: draft
+Title: R Markdown templates for working papers and academic journal submissions
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "JBrandon",
+           family = "Duck-Mayr",
+           role = c("aut", "cre"),
+           email = "j.duckmayr@gmail.com",
+           comment = c(ORCID = "0000-0002-2231-1294"))
+Description: What the package does (one paragraph).
+License: GPL (>= 2.0)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1

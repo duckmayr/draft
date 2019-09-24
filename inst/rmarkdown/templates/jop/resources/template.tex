@@ -7,7 +7,17 @@ $endif$
 
 \documentclass{jopsubmission}
 
-\usepackage{amssymb,amsmath}
+%% Math support
+\usepackage{amssymb} % Note: loads amsfonts
+\usepackage{amsmath}
+$if(theorems)$
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}[proposition]
+\newtheorem{thm_corollary}{Corollary}[theorem]
+$endif$
 
 \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -70,10 +80,6 @@ $if(listings)$
     \newcommand{\passthrough}[1]{#1}
     \lstset{defaultdialect=[5.3]Lua}
     \lstset{defaultdialect=[x86masm]Assembler}
-$endif$
-
-$if(lhs)$
-    \lstnewenvironment{code}{\lstset{language=Haskell,basicstyle=\small\ttfamily}}{}
 $endif$
 
 $if(highlighting-macros)$

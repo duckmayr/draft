@@ -15,7 +15,7 @@
 
 % We need ALL text to be double-spaced, including footnotes
 \RequirePackage{setspace}
-\RequirePackage[bottom]{footmisc}
+\RequirePackage[bottom, flushmargin]{footmisc}
 \doublespacing
 \setlength{\footnotesep}{\baselineskip}
 \renewcommand{\footnotelayout}{\doublespacing}

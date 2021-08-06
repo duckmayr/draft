@@ -1,0 +1,16 @@
+Package: draft
+Title: Provides R Markdown formats and templates for political science journals
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "JBrandon",
+           family = "Duck-Mayr",
+           role = c("aut", "cre"),
+           email = "j.duckmayr@gmail.com",
+           comment = c(ORCID = "0000-0002-2231-1294"))
+Description: Provides R Markdown formats and templates for political science
+    journals, as well as a working paper format and template.
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1

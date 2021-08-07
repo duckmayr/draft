@@ -12,7 +12,7 @@ a word count is desired}
 }
 \value{
 A named numeric vector of class "wordcount". The vector separately
-lists wordc ounts for: (1) text, including section headings and footnotes;
+lists word counts for: (1) text, including section headings and footnotes;
 (2) captions and subcaptions; (3) citations in the text; (4) the
 references section; and (5) the total word count of all of the above.
 }
@@ -26,4 +26,12 @@ This function attempts to get an accurate word count for an R Markdown
 document that will be rendered to PDF via LaTeX. As with any option, it will
 be imperfect, but it tends to provide counts between using texcount or the
 pdftotext + wc options, so it should be fairly accurate.
+}
+\details{
+NOTE: This function will only work if you have the packages \code{bibtex}
+and \code{RefManageR} installed. As the \code{bibtex} package is currently
+in "orphaned" status on CRAN, it is not listed as a strict requirement as
+this package, so installing this package does not automatically install
+\code{bibtex} and you will have to manually install it yourself via
+\code{\link[utils]{install.packages}}.
 }

@@ -10,16 +10,31 @@
 #' be imperfect, but it tends to provide counts between using texcount or the
 #' pdftotext + wc options, so it should be fairly accurate.
 #'
+#' NOTE: This function will only work if you have the packages \code{bibtex}
+#' and \code{RefManageR} installed. As the \code{bibtex} package is currently
+#' in "orphaned" status on CRAN, it is not listed as a strict requirement as
+#' this package, so installing this package does not automatically install
+#' \code{bibtex} and you will have to manually install it yourself via
+#' \code{\link[utils]{install.packages}}.
+#'
 #' @param path A character vector of lenth one; the path to the file for which
 #'   a word count is desired
 #'
 #' @return A named numeric vector of class "wordcount". The vector separately
-#'   lists wordc ounts for: (1) text, including section headings and footnotes;
+#'   lists word counts for: (1) text, including section headings and footnotes;
 #'   (2) captions and subcaptions; (3) citations in the text; (4) the
 #'   references section; and (5) the total word count of all of the above.
 #'
+#' @importFrom RefManageR ReadBib
+#' @importFrom utils capture.output
 #' @export
 word_count <- function(path) {
+    ## Ensure bibtex package is installed
+    if ( !requireNamespace("bibtex", quietly = TRUE)  ) {
+        stop("The `bibtex` package is required to use the word_count() ",
+             "function; please install it using the R command\n",
+             "\tinstall.packages(\"bibtex\")")
+    }
     ## Read in text from path
     text <- paste(readLines(path), collapse = "\n")
     ## Find and parse bib file

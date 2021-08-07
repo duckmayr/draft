@@ -1,0 +1,15 @@
+---
+title: "Your Title"
+author: "Your Name"
+abstract: "Your abstract goes here"
+thanks: "Acknowledgements go here"
+wordcount: ""
+appendices: [""]
+bibliography: ""
+titlepage: true
+numbersections: true
+output: draft::working_paper
+knit: draft::knit_with_appendices
+---
+
+
